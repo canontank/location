@@ -47,7 +47,7 @@ function setLocationTitle() {
 function setLocationContents(rows) {
 	rows.reverse();
 	for (var row of rows) {
-		if (row['agent'].indexOf(navigator.userAgent.toLowerCase()) > 0)
+		if (row['agent'] != navigator.userAgent.toLowerCase())
 			continue;
 		$("#location").append($('<tr/>')
 			.append($('<td/>', { html : row['timestamp'], align : 'center' }))
