@@ -47,8 +47,6 @@ function setLocationTitle() {
 function setLocationContents(rows) {
 	rows.reverse();
 	for (var row of rows) {
-		console.log('agent : ' + row['agent']);
-		console.log('toLowerCase() : ' + navigator.userAgent.toLowerCase());
 		if (row['agent'] != navigator.userAgent.toLowerCase())
 			continue;
 		$("#location").append($('<tr/>')
