@@ -2,6 +2,11 @@ body {
     padding-top : 70px;
 }
 
+button {
+    height : 20px;
+    line-height : 8px;
+}
+
 .container {
     margin-left : 0px;
     margin-right : 0px;
@@ -26,34 +31,4 @@ body {
 .table-bordered > tbody > tr > td, 
 .table-bordered > tfoot > tr > td {
     padding : 6px;
-}
-
-.stock {
-    text-align : center;
-}
-
-.index {
-    text-align : right;
-    font-weight : bold;
-}
-
-.rate {
-    text-align : right;
-    font-weight : bold;
-}
-
-.crate {
-    text-align : right;
-}
-
-.repay {
-    font-weight : bold;
-}
-
-.red {
-    color : red;
-}
-
-.blue {
-    color : blue;
 }
