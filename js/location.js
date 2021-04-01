@@ -12,7 +12,7 @@ $(document).ready(function() {
 
 function addLocation(latitude, longitude) {
 	$.ajax({
-		type: "POST",
+		type: "GET",
 		url : "https://script.google.com/macros/s/AKfycbxiuSuCSGmawBUPdmprTqcViQQO0dukeHLLQaqeQjMaJ6D1r4Y/exec",
 		data: {
 			"timestamp" : getDateTime(),
