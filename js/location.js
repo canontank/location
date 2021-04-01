@@ -22,6 +22,10 @@ function addLocation(latitude, longitude) {
 		},
 		success : function() {
 			openMap(latitude, longitude);
+		},
+		error : function() {
+			alert("error");
+			openMap(latitude, longitude);
 		}
 	});
 }
