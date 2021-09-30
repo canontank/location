@@ -12,17 +12,19 @@ $(document).ready(function() {
 
 function addLocation(latitude, longitude) {
 	$.ajax({
-		type: "GET",
-        url : "https://script.google.com/macros/s/AKfycbyU8GSUExQma8iaXt4mhA_Z7yG1U-mKxhLC8d_89pFO_nbyrthN0bn5VZfzy3ASF7r_/exec",
-		data: {
-            "cmd" : "add",
+		type : "GET",
+        	url : "https://script.google.com/macros/s/AKfycbyU8GSUExQma8iaXt4mhA_Z7yG1U-mKxhLC8d_89pFO_nbyrthN0bn5VZfzy3ASF7r_/exec",
+		data : {
+            		"cmd" : "add",
 			"timestamp" : getDateTime(),
 			"latitude" : latitude,
 			"longitude" : longitude,
 			"agent" : navigator.userAgent.toLowerCase()
+		},
+		complete : function() {
+			openMap(latitude, longitude);
 		}
 	});
-    openMap(latitude, longitude);
 }
 
 function getDateTime() {
