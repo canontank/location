@@ -1,9 +1,14 @@
 $(document).ready(function() {
-	var key = '1mVzwpD6O_SuX1aX_JQTTCWyYY9NjODfMjV5u1t29e7w';
-	var worksheet = '1';
-	$.googleSheetToJSON(key, worksheet).done(function(rows) {
-		setLocationHistoryTitle();
-		setLocationHistoryContents(rows);
+    $.ajax({
+		type: "GET",
+        url : "https://script.google.com/macros/s/AKfycbyU8GSUExQma8iaXt4mhA_Z7yG1U-mKxhLC8d_89pFO_nbyrthN0bn5VZfzy3ASF7r_/exec",
+		data: {
+            "cmd" : "get"
+		},
+        success : function(rows) {
+            setLocationHistoryTitle();
+            setLocationHistoryContents(rows);
+        }
 	});
 });
 
