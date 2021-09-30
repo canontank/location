@@ -1,11 +1,11 @@
 $(document).ready(function() {
 	$.ajax({
 		type: "GET",
-        url : "https://script.google.com/macros/s/AKfycbyU8GSUExQma8iaXt4mhA_Z7yG1U-mKxhLC8d_89pFO_nbyrthN0bn5VZfzy3ASF7r_/exec",
+        	url : "https://script.google.com/macros/s/AKfycbyU8GSUExQma8iaXt4mhA_Z7yG1U-mKxhLC8d_89pFO_nbyrthN0bn5VZfzy3ASF7r_/exec",
 		data: {
 			"cmd" : "get"
 		},
-        success : function(rows) {
+        	success : function(rows) {
 			setLocationHistoryTitle();
 			setLocationHistoryContents(rows);
 		}
