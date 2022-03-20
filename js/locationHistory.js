@@ -47,5 +47,6 @@ function getSummaryLocation(value) {
 function openMap(latitude, longitude) {
 	if (latitude == null || longitude == null)
 		return;
-	location.href = 'https://m.map.naver.com?lat=' + latitude + '&lng=' + longitude;
+	//location.href = 'https://m.map.naver.com?lat=' + latitude + '&lng=' + longitude;
+	open('https://m.map.naver.com?lat=' + latitude + '&lng=' + longitude);
 }
