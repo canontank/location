@@ -6,7 +6,8 @@ $(document).ready(function() {
 	navigator.geolocation.getCurrentPosition (function(pos) {
 		var latitude = pos.coords.latitude; // 위도
 		var longitude = pos.coords.longitude; // 경도
-		addLocation(latitude, longitude);
+		//addLocation(latitude, longitude);
+		console.log(getDateTime());
 	});
 });
 
