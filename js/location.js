@@ -29,7 +29,20 @@ function addLocation(latitude, longitude) {
 
 function getDateTime() {
 	var date = new Date();
-	return date.getFullYear() + ". " + (date.getMonth() + 1) + ". " + date.getDate() + "  " + date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds();
+	var year = getNumberStr(date.getFullYear());
+	var month = getNumberStr(date.getMonth() + 1);
+	var day = getNumberStr(date.getDate());
+	var hour = getNumberStr(date.getHours());
+	var minute = getNumberStr(date.getMinutes());
+	var second = getNumberStr(date.getSeconds());
+	return year + month + day + hour + minute + second;
+	//return date.getFullYear() + "-" + (date.getMonth() + 1) + "-" + date.getDate() + " " + date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds();
+}
+
+function getNumberStr(number) {
+	if (number < 10)
+		return "0" + number;
+	return number;
 }
 
 function openMap(latitude, longitude) {
