@@ -6,8 +6,7 @@ $(document).ready(function() {
 	navigator.geolocation.getCurrentPosition (function(pos) {
 		var latitude = pos.coords.latitude; // 위도
 		var longitude = pos.coords.longitude; // 경도
-		//addLocation(latitude, longitude);
-		console.log(getDateTime());
+		addLocation(latitude, longitude);
 	});
 });
 
@@ -36,8 +35,7 @@ function getDateTime() {
 	var hour = getNumberStr(date.getHours());
 	var minute = getNumberStr(date.getMinutes());
 	var second = getNumberStr(date.getSeconds());
-	return year + month + day + hour + minute + second;
-	//return date.getFullYear() + "-" + (date.getMonth() + 1) + "-" + date.getDate() + " " + date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds();
+	return year + "-" + month + "-" + day + " " + hour + ":" + minute + ":" + second;
 }
 
 function getNumberStr(number) {
